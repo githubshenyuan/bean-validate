@@ -14,7 +14,7 @@ public class test {
     public static void main(String[] args) throws IllegalAccessException, IntrospectionException {
         User user = new User();
         user.setUuid("123");
-        user.setUserName("username");
+        user.setUserName("user");
         user.setPassword("password");
         user.setInputDate("2018-11-02 12:01:32");
 
@@ -22,7 +22,7 @@ public class test {
 
 
         System.out.println("呵呵呵");
-        // System.out.println(BeanValidate.validate(user));
+        System.out.println(BeanValidate.validate(user));
 
 
     }

@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * @version ideaIU-2018.2.3.win
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Inherited
 @Documented
 public @interface Validate {

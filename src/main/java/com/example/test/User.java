@@ -1,6 +1,7 @@
 package com.example.test;
 
 import com.example.annotation.DateValidate;
+import com.example.annotation.ObjectValidate;
 import com.example.annotation.StringValidate;
 import com.example.annotation.Validate;
 
@@ -23,6 +24,8 @@ public class User {
     private Date date;
     @StringValidate
     private String inputDate;
+    @ObjectValidate(id = "", notNull = true)
+    private Grade grade;
 
     public String getUuid() {
         return uuid;
@@ -62,5 +65,13 @@ public class User {
 
     public void setInputDate(String inputDate) {
         this.inputDate = inputDate;
+    }
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
     }
 }
