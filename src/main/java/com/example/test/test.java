@@ -1,49 +1,29 @@
 package com.example.test;
 
+import com.example.BeanValidate;
 import com.example.annotation.DateValidate;
 import com.example.annotation.StringValidate;
 
-import java.util.Date;
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.*;
 
 public class test {
-    @StringValidate()
-    private String uuid;
-    @StringValidate()
-    private String userName;
-    @StringValidate()
-    private String password;
-    @DateValidate()
-    private Date inputDate;
+    public static void main(String[] args) throws IllegalAccessException, IntrospectionException {
+        User user = new User();
+        user.setUuid("123");
+        user.setUserName("username");
+        user.setPassword("password");
+        user.setInputDate("2018-11-02 12:01:32");
 
-    public String getUuid() {
-        return uuid;
-    }
+        Map<String, String> map = new HashMap<String, String>();
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
 
-    public String getUserName() {
-        return userName;
-    }
+        System.out.println("呵呵呵");
+        // System.out.println(BeanValidate.validate(user));
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Date getInputDate() {
-        return inputDate;
-    }
-
-    public void setInputDate(Date inputDate) {
-        this.inputDate = inputDate;
     }
 }
